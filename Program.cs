@@ -53,42 +53,19 @@ b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; -0,5)
 
 */
 
-double [] point (double x, double y)
+void point()
 {
     Console.WriteLine("input b1");
-    int b1 = Convert.ToInt32(Console.ReadLine());
-    Console.WriteLine("input b2");
-    int b2 = Convert.ToInt32(Console.ReadLine());
+    double b1 = Convert.ToInt32(Console.ReadLine());
     Console.WriteLine("input k1");
-    int k1 = Convert.ToInt32(Console.ReadLine());
+    double k1 = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("input b2");
+    double b2 = Convert.ToInt32(Console.ReadLine());
     Console.WriteLine("input k2");
-    int k2 = Convert.ToInt32(Console.ReadLine());
+    double k2 = Convert.ToInt32(Console.ReadLine());
     
-    x = (b2 - b1)/(k1 - k2);
-    y = k1 * x + b1;
-    double [] arr = {x, y};
-    
-    return arr;
+    Console.WriteLine($"({(b2 - b1) / (k1 - k2)}; {k1 * ((b2 - b1) / (k1 - k2)) + b1})");
+
 }
 
-
-void PrintArray(double [] arrayPrint)
-{
-    for (int i = 0; i < arrayPrint.Length; i++)
-    {
-        Console.Write(arrayPrint[i] + " ");
-    }
-    Console.WriteLine();
-}
-
-Console.WriteLine("input b1");
-int b1 = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("input b2");
-int b2 = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("input k1");
-int k1 = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("input k2");
-int k2 = Convert.ToInt32(Console.ReadLine());
-
-double [] randomArray = point(x, y);
-PrintArray(randomArray);
+point();
